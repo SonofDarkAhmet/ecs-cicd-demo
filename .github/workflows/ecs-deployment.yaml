@@ -63,5 +63,7 @@ jobs:
         with:
           context: ./react-client
           file: ./react-client/Dockerfile.prod
+          build-args: |
+            VITE_API_BASE_URL=http://ECS-LoadBalancer-232098305.eu-north-1.elb.amazonaws.com
           push: true
           tags: ${{ steps.meta.outputs.tags }}
