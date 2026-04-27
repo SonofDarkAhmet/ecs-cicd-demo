@@ -32,7 +32,9 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <h1>Programming Jokes Raif Basgannn!!</h1>
+      <h1>
+        Programming Jokes! Runs on ECS using CI/CD pipeline with Github Actions
+      </h1>
       <hr />
       <JokeList jokes={jokes} />
     </div>
