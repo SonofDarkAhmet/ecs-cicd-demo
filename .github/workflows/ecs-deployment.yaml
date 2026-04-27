@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 env:
   NODE_IMAGE_NAME: ecs-aws-demo
+  REACT_IMAGE_NAME: ecs-aws-react-demo
 jobs:
   build-image-node:
     runs-on: ubuntu-latest
@@ -51,7 +52,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ vars.DOCKER_USERNAME }}/${{ env.NODE_IMAGE_NAME }}
+          images: ${{ vars.DOCKER_USERNAME }}/${{ env.REACT_IMAGE_NAME }}
           tags: |
             latest
             v1.0.${{ github.run_number }}
