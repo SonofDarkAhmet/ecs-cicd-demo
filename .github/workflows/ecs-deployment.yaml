@@ -10,8 +10,8 @@ env:
   ECS_TASK_DEFINITION: ECSdemotd
   ECS_CLUSTER: ECSdemocluster
   ECS_SERVICE: ECSdemoservice
-  NODE_CONTAINER_NAME: nodeappcontainer
-  REACT_CONTAINER_NAME: reactappcontainer
+  NODE_CONTAINER_NAME: ecs-aws-demo
+  REACT_CONTAINER_NAME: ecs-aws-react-demo
 jobs:
   build-image-node:
     runs-on: ubuntu-latest
