@@ -91,7 +91,7 @@ jobs:
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
           task-definition-family: ${{ env.ECS_TASK_DEFINITION }}
-          container-name: ${{ env.NODE_IMAGE_NAME }}
+          container-name: ${{ env.NODE_CONTAINER_NAME }}
           image: ${{ vars.DOCKER_USERNAME }}/${{ env.NODE_IMAGE_NAME }}
 
       - name: Modify Amazon ECS task definition with second container for react
@@ -99,7 +99,7 @@ jobs:
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          container-name: ${{ env.REACT_IMAGE_NAME }}
+          container-name: ${{ env.REACT_CONTAINER_NAME }}
           image: ${{ vars.DOCKER_USERNAME }}/${{ env.REACT_IMAGE_NAME }}
 
       - name: Deploy to Amazon ECS service
