@@ -60,5 +60,4 @@ volumes:
 networks:
   db-net:
   server-net:
-
-  # sonofdarkahmet_db_user aws-ecs-demo-123
+  
